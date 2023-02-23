@@ -8,8 +8,8 @@
 ?>
 
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-7">
+  <div class="row">
+    <div class="col-md-8">
         <!--inicio alerta--> 
         <?php
             if(isset($_GET['mensaje']) and $_GET['mensaje'] == 'falta'){
@@ -74,7 +74,7 @@
         <div class="card-header">
           Venta  
       </div>
-      <div class="p-0">
+      <div class="p-4">
         <div class="table-responsive">
           <table class="table align-middle">
             <thead>
@@ -116,13 +116,13 @@
         </div>
       </div>                                        
     </div>
-    <div class="col-md">
-       <div class="card">
+    <div class="col-8">                  
+       <div class="card">   
         <div class="card-header">
           Ingresar datos:
         </div>
         <form class="p-4" method="POST" action="registrar.php">
-          <div class="mb-3">
+          <div class="mb-0">
             <label class="form-label">Codigo: </label>
             <input type="text" class="form-control" name="txtcodigo" autofocus required>
           </div>
