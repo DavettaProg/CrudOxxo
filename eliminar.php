@@ -5,17 +5,15 @@
     }
 
     include 'model/conexion.php';
-    $codigo = $_POST['codigo'];
+    $codigo = $_GET['codigo'];
 
-  $sentencia = $bd->prepare("DELETE FROM venta where codigo = ?;");
-  $resultado = $sentencia->execute([$codigo]);
+    $sentencia = $bd->prepare("DELETE FROM venta where codigo = ?;");
+    $resultado = $sentencia->execute([$codigo]);
 
-  if ($resultado === TRUE) {
-    header('Location: index.php?mensaje=eliminado');
-   
-  } else {
-    header('Location: index.php?mensaje=error');
+    if ($resultado === TRUE) {
+        header('Location: index.php?mensaje=eliminado');
+    } else {
+        header('Location: index.php?mensaje=error');
+    }
     
-  }
-  
 ?>
